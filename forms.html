@@ -78,36 +78,48 @@
       <!--border end-->
     </header>
 
+    <!--light/dark start ends-->
+    <script>
+      function myFunction() {
+        var element = document.body;
+        element.classList.toggle("dark-mode");
+      }
+    </script>
+    <!--light/dark script ends-->
+
     <!--navigation bar start-->
     <div class="topnav" id="myTopnav">
-        <a class="active" href="/index.html"><i class="fa fa-home"></i></a>
-        <a href="/forms.html">Formulär</a>
-        <a href="/contact.html">Kontakt</a>
-        <a href="#about">Om mig</a>
-  
-        <a class="nav-link" button onclick="myFunction()">Tema</a>
-  
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-          <i class="fa fa-bars"></i>
-        </a>
-      </div>
+      <a class="active" href="/index.html"><i class="fa fa-home"></i></a>
+      <a href="/forms.html">Formulär</a>
+      <a href="/contact.html">Kontakt</a>
+      <a href="#about">Om mig</a>
+
+      <a class="nav-link" button onclick="myFunction()">Tema</a>
+
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
 
     <!--Navigation ends-->
     <br />
     <br />
 
+    <h2 style>Här kan du ställa frågor till mig</h2>
 
-    <h2>Ett responsivt formulär</h2>
-   
-    
     <div class="container">
-      <form action="/action_page.php">
+      <form action="/index.html">
         <div class="row">
           <div class="col-25">
             <label for="fname">Förnamn</label>
           </div>
           <div class="col-75">
-            <input type="text" id="fname" name="firstname" placeholder="Ditt förnamn..">
+            <input
+              type="text"
+              id="fname"
+              name="firstname"
+              placeholder="Ditt förnamn.."
+            />
           </div>
         </div>
         <div class="row">
@@ -115,7 +127,12 @@
             <label for="lname">Efter Namn</label>
           </div>
           <div class="col-75">
-            <input type="text" id="lname" name="lastname" placeholder="Dit efternamn..">
+            <input
+              type="text"
+              id="lname"
+              name="lastname"
+              placeholder="Dit efternamn.."
+            />
           </div>
         </div>
         <div class="row">
@@ -135,39 +152,30 @@
             <label for="subject">Fråga</label>
           </div>
           <div class="col-75">
-            <textarea id="subject" name="subject" placeholder="Skriv din fråga här.." style="height:200px"></textarea>
+            <textarea
+              id="subject"
+              name="subject"
+              placeholder="Skriv din fråga här.."
+              style="height: 200px"
+            ></textarea>
           </div>
         </div>
         <div class="row">
-          
-          <input type="submit" value="Submit">
-          <button onclick="myFunction()">Try it</button>
-
-            <p id="demo"></p>
+          <button onclick="SubmitFunction()">Klar</button>
+          <p id="demo"></p>
         </div>
       </form>
     </div>
 
-    <!--light/dark start ends-->
     <script>
-      function myFunction() {
-        var element = document.body;
-        element.classList.toggle("dark-mode");
+      function SubmitFunction() {
+        var txt;
+        if (confirm("Tack för din fråga!")) {
+        } else {
+        }
+        document.getElementById("demo").innerHTML = txt;
       }
     </script>
-    <!--light/dark script ends-->
-
-    <script>
-        function SubmitFunction() {
-          var txt;
-          if (confirm("Press a button!")) {
-            txt = "You pressed OK!";
-          } else {
-            txt = "You pressed Cancel!";
-          }
-          document.getElementById("demo").innerHTML = txt;
-        }
-        </script>
   </body>
   <br />
 
